@@ -18,14 +18,9 @@ class C_Core_MetaClndr
 {
 public:
     C_Core_MetaClndr(const uint64_t& iBeginToRefMl,
-                     const uint64_t& iAfterRefMl);
+                     const uint64_t& iAfterRefMl = 0U);
     static const T_Core_RefDateTime* RefDateTime(void);
     void Refersh(void);
-    uint64_t Prim(void);
-    uint64_t Peri(void);
-    uint64_t Asse(void);
-    uint64_t Oper(void);
-    uint64_t Era (void);
     uint64_t Year(void);
     uint64_t Mont(void);
     uint64_t Day (void);
@@ -35,6 +30,8 @@ public:
     uint64_t Mili(void);
     ~C_Core_MetaClndr(void);
     std::string GetCalendar(void);
+    static std::string TransFromMil(const uint64_t& iMilSt,
+                                    const uint64_t& iMilAj = 0U);
 };
 
 #endif // C_CORE_METACLNDR_H

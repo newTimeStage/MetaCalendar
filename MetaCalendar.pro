@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     c_core_metaclndr.cpp \
+    c_ui_refreshthrd.cpp \
     main.cpp \
     c_form_clndr.cpp
 
 HEADERS += \
     c_core_metaclndr.h \
-    c_form_clndr.h
+    c_form_clndr.h \
+    c_ui_refreshthrd.h
 
 FORMS += \
     c_form_clndr.ui

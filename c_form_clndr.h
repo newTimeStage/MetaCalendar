@@ -18,6 +18,9 @@ public:
 
     ~C_Form_Clndr();
 
+private slots:
+    void on_pushButtonTrans_clicked();
+
 private:
     Ui::C_Form_Clndr *ui;
 };
