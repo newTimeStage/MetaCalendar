@@ -11,39 +11,40 @@
 #define dClndrRefMinute  (0L)
 #define dClndrRefSecond  (0L)
 
-#define dCycDifSgt       (1000U)
+#define dTagDifSgt       (1000U)
 
-#define dCycLenMili      (1.0f)
-#define dCycLenSeco      (1000.0f*dCycLenMili)
-#define dCycLenMinu      (60.0f*dCycLenSeco)
-#define dCycLenHour      (60.0f*dCycLenMinu)
-#define dCycLenDay       (24.0f*dCycLenHour)
-#define dCycLenMont      (29.530588853f*dCycLenDay)   /* 月球周年 */
-#define dOffstMont       (5.0f*dCycLenMont + 18.0f*dCycLenDay)
-#define dCycLnMonDiffYr  (0.000000002162f*dCycLenDay)  /* from J2000 + */
-#define dCycLenMercury   (87.9691f*dCycLenDay)    /* 水星周年 */
-#define dCycLenVenus     (224.701f*dCycLenDay)    /* 金星周年 */
-#define dCycLenYear      (365.242189670f*dCycLenDay)  /* 地球周年 */
-#define dCycLenSlrTrm    (dCycLenYear/24.0f)
-#define dOffstSlrTrm     (9.0f*dCycLenSlrTrm + 9.0f*dCycLenDay)
-#define dCycLenSeason    (dCycLenYear/4.0f)
-#define dOffstSeason     (1.0f*dCycLenSeason + 11.0f*dCycLenDay)
-#define dCycLenYrDiffDy  (0.00000006162f*dCycLenDay)  /* from J2000 - */
-#define dCycLenMars      (686.971f*dCycLenDay)    /* 火星周年 */
-#define dCycLenCeres     (4.06f*dCycLenYear)      /* 谷神星周年 */
-#define dCycLenJupiter   (11.862615f*dCycLenYear) /* 木星周年 */
-#define dCycLenSaturn    (29.447498f*dCycLenYear) /* 土星周年 */
-#define dCycLenUranus    (84.016846f*dCycLenYear) /* 天王星周年 */
-#define dCycLenNeptune   (164.79132f*dCycLenYear) /* 海王星周年 */
-#define dCycLenPluto     (247.92065f*dCycLenYear)   /* 冥王星周年 */
-#define dCycLenHaumea    (283.28f*dCycLenYear)      /* 妊神星周年 */
-#define dCycLenMakemake  (305.5f*dCycLenYear)       /* 鸟神星周年 */
-#define dCycLenEris      (556.901f*dCycLenYear)     /* 阋神星周年 */
-#define dCycLenAxial     (25771.5f*dCycLenYear)
-#define dCycLenWall      (dCycLenAxial/10.0f)
-#define dCycLenWork      (dCycLenAxial/5.0f)
-#define dCycLenMeta      (129600.0f*dCycLenYear)
-#define dCycLenMax       (3.1415926f*2.718281828f*dCycLenMeta)
+#define dTagLenMili      (1.0f)
+#define dTagLenSeco      (1000.0f*dTagLenMili)
+#define dTagLenMinu      (60.0f*dTagLenSeco)
+#define dTagLenHour      (60.0f*dTagLenMinu)
+#define dTagLenDay       (24.0f*dTagLenHour)
+#define dOffstDay        (-12.0f*dTagLenDay)
+#define dTagLenMont      (29.530588853f*dTagLenDay)   /* 月球周年 */
+#define dOffstMont       (3.0f*dTagLenMont + 17.0f*dTagLenDay)
+#define dTagLnMonDiffYr  (0.000000002162f*dTagLenDay)  /* from J2000 + */
+#define dTagLenMercury   (87.9691f*dTagLenDay)    /* 水星周年 */
+#define dTagLenVenus     (224.701f*dTagLenDay)    /* 金星周年 */
+#define dTagLenYear      (365.242189670f*dTagLenDay)  /* 地球周年 */
+#define dTagLenSlrTrm    (15.0f*dTagLenDay)
+#define dOffstSlrTrm     (9.0f*dTagLenSlrTrm + 10.0f*dTagLenDay - 49.0f*dTagLenMinu)
+#define dTagLenSeason    (dTagLenYear/4.0f)
+#define dOffstSeason     (1.0f*dTagLenSeason + 10.0f*dTagLenDay - 13.0f*dTagLenHour - 4.0f*dTagLenMinu)
+#define dTagLenYrDiffDy  (0.00000006162f*dTagLenDay)  /* from J2000 - */
+#define dTagLenMars      (686.971f*dTagLenDay)    /* 火星周年 */
+#define dTagLenCeres     (4.06f*dTagLenYear)      /* 谷神星周年 */
+#define dTagLenJupiter   (11.862615f*dTagLenYear) /* 木星周年 */
+#define dTagLenSaturn    (29.447498f*dTagLenYear) /* 土星周年 */
+#define dTagLenUranus    (84.016846f*dTagLenYear) /* 天王星周年 */
+#define dTagLenNeptune   (164.79132f*dTagLenYear) /* 海王星周年 */
+#define dTagLenPluto     (247.92065f*dTagLenYear)   /* 冥王星周年 */
+#define dTagLenHaumea    (283.28f*dTagLenYear)      /* 妊神星周年 */
+#define dTagLenMakemake  (305.5f*dTagLenYear)       /* 鸟神星周年 */
+#define dTagLenEris      (556.901f*dTagLenYear)     /* 阋神星周年 */
+#define dTagLenAxial     (25771.5f*dTagLenYear)
+#define dTagLenWall      (dTagLenAxial/10.0f)
+#define dTagLenWork      (dTagLenAxial/5.0f)
+#define dTagLenMeta      (129600.0f*dTagLenYear)
+#define dTagLenMax       (3.1415926f*2.718281828f*dTagLenMeta)
 
 
 
@@ -72,25 +73,24 @@
 #define dIndxWork        (dIndxWall     + 1L)
 #define dIndxAxial       (dIndxWork     + 1L)
 #define dIndxMeta        (dIndxAxial    + 1L)
-#define dNumCycle        (dIndxMeta     + 1L)
+#define dNumTagle        (dIndxMeta     + 1L)
 
 
-typedef struct stctMetaCyc
+typedef struct typMetaTag
 {
-    uint64_t CycNo;
-    uint64_t LenMl;
-    uint64_t DiffA;
-    uint64_t CyLen;
-    uint64_t ReLen;
-    uint64_t DiffL;
-}T_MetaCyc;
+    uint64_t Num   ;
+    uint64_t CurLen;
+    uint64_t DiffA ;
+    uint64_t Length;
+    uint64_t DiffL ;
+}T_MetaTag;
 
-typedef struct stctCycCfg
+typedef struct typTagCfg
 {
-    uint64_t Start;
-    double   CyLen;
-    double   ReLen;
-}T_CycCfg;
+    uint64_t Start ;
+    double   Length;
+    int      RstIdx;
+}T_TagCfg;
 
 class CMetaClndr
 {
@@ -98,12 +98,12 @@ public:
     CMetaClndr(const uint64_t& iBeginToRefMil,
                const uint64_t& iAfterRefMil);
     void Refrash(void);
-    uint64_t CycNo(const int iIdx);
+    uint64_t Num(const int iIdx);
     std::string StrClndr(void);
     ~CMetaClndr(void);
 private:
-    T_MetaCyc MtCycLst[dNumCycle];
-    void InitCycLst(void);
+    T_MetaTag MtTagLst[dNumTagle];
+    void InitTagLst(void);
     void SetBegin(const uint64_t& iBeginToRefMil);
     void UpTo(const uint64_t& iAfterRefMil);
     void Adjust(const uint64_t& iAfterRefMil);
@@ -119,36 +119,36 @@ static const T_Core_RefDateTime scnstRefDateTime = {
     dClndrRefSecond,
 };
 
-static const T_CycCfg scnstCycCfgLst[dNumCycle] = {
-    { 0U, dCycLenMili    , dCycLenSeco},
-    { 0U, dCycLenSeco    , dCycLenMinu},
-    { 0U, dCycLenMinu    , dCycLenHour},
-    { 0U, dCycLenHour    , dCycLenDay },
-    { 1U, dCycLenDay     , dCycLenMont},
-    { 1U, dCycLenSlrTrm  , dCycLenYear},
-    { 1U, dCycLenMont    , 12.0f*dCycLenMont},
-    { 1U, dCycLenMercury , dCycLenWall},
-    { 1U, dCycLenSeason  , dCycLenYear},
-    { 1U, dCycLenVenus   , dCycLenWall},
-    { 1U, dCycLenYear    , dCycLenWall},
-    { 1U, dCycLenMars    , dCycLenWall},
-    { 1U, dCycLenCeres   , dCycLenWall},
-    { 1U, dCycLenJupiter , dCycLenWall},
-    { 1U, dCycLenSaturn  , dCycLenWall},
-    { 1U, dCycLenUranus  , dCycLenWall},
-    { 1U, dCycLenNeptune , dCycLenWall},
-    { 1U, dCycLenPluto   , dCycLenWall},
-    { 1U, dCycLenHaumea  , dCycLenWork},
-    { 1U, dCycLenMakemake, dCycLenWork},
-    { 1U, dCycLenEris    , dCycLenWork},
-    { 0U, dCycLenWall    , dCycLenAxial},
-    { 1U, dCycLenWork    , dCycLenAxial},
-    { 1U, dCycLenAxial   , dCycLenMeta },
-    { 1U, dCycLenMeta    , dCycLenMax },
+static const T_TagCfg scTagCfgLst[dNumTagle] = {
+    { 0U, dTagLenMili    ,dIndxSeco },
+    { 0U, dTagLenSeco    ,dIndxMinu },
+    { 0U, dTagLenMinu    ,dIndxHour },
+    { 0U, dTagLenHour    ,dIndxDay  },
+    { 1U, dTagLenDay     ,dIndxMont },
+    { 1U, dTagLenSlrTrm  ,dIndxYear },
+    { 1U, dTagLenMont    ,dIndxYear },
+    { 1U, dTagLenMercury ,dIndxWall },
+    { 1U, dTagLenSeason  ,dIndxYear },
+    { 1U, dTagLenVenus   ,dIndxWall },
+    { 1U, dTagLenYear    ,dIndxWall },
+    { 1U, dTagLenMars    ,dIndxWall },
+    { 1U, dTagLenCeres   ,dIndxWall },
+    { 1U, dTagLenJupiter ,dIndxWall },
+    { 1U, dTagLenSaturn  ,dIndxWall },
+    { 1U, dTagLenUranus  ,dIndxWall },
+    { 1U, dTagLenNeptune ,dIndxWall },
+    { 1U, dTagLenPluto   ,dIndxWall },
+    { 1U, dTagLenHaumea  ,dIndxWork },
+    { 1U, dTagLenMakemake,dIndxWork },
+    { 1U, dTagLenEris    ,dIndxWork },
+    { 0U, dTagLenWall    ,dIndxAxial},
+    { 1U, dTagLenWork    ,dIndxAxial},
+    { 1U, dTagLenAxial   ,dIndxMeta },
+    { 1U, dTagLenMeta    ,dIndxMeta },
 };
   
-static const std::string scnstKeyTag[dNumCycle] = {
-    "毫","秒","分","时","日","候","月","水","季","金","年","火","谷","木","土","天","海","冥","妊","鸟","阋","垣","行","纪","元",
+static const std::string scnstKeyTag[dNumTagle] = {
+    "毫","秒","分","时","日","气","月","水","季","金","年","火","谷","木","土","天","海","冥","妊","鸟","阋","垣","行","纪","元",
 };
 
 static CMetaClndr* sclsMetaClndr = NULL;
@@ -156,7 +156,7 @@ static CMetaClndr* sclsMetaClndr = NULL;
 
 CMetaClndr::CMetaClndr(const uint64_t& iBeginToRefMil,
                        const uint64_t& iAfterRefMil) {
-    InitCycLst();
+    InitTagLst();
     SetBegin(iBeginToRefMil);
     Adjust(iAfterRefMil);
 }
@@ -167,33 +167,33 @@ uint64_t CMetaClndr::DoubleToUint(const double iDblVal) {
     return static_cast<uint64_t>(IntPart);
 }
 
-void CMetaClndr::InitCycLst(void) {
-    for(int i=0L; dNumCycle > i; i++) {
-        MtCycLst[i].CycNo = scnstCycCfgLst[i].Start;
+void CMetaClndr::InitTagLst(void) {
+    for(int i=0L; dNumTagle > i; i++) {
+        MtTagLst[i].Num = scTagCfgLst[i].Start;
         double IntPart, FracPart;
-        FracPart = std::modf(scnstCycCfgLst[i].ReLen, &IntPart);
-        MtCycLst[i].ReLen = static_cast<uint64_t>(IntPart);
-        FracPart = std::modf(scnstCycCfgLst[i].CyLen, &IntPart);
-        MtCycLst[i].CyLen = static_cast<uint64_t>(IntPart);
-        MtCycLst[i].DiffL = dCycDifSgt*static_cast<uint64_t>(FracPart);
-        MtCycLst[i].DiffA = 0U;
-        MtCycLst[i].LenMl = 0U;
+        FracPart = std::modf(scTagCfgLst[i].Length, &IntPart);
+        MtTagLst[i].Length = static_cast<uint64_t>(IntPart);
+        MtTagLst[i].DiffL = dTagDifSgt*static_cast<uint64_t>(FracPart);
+        MtTagLst[i].DiffA = 0U;
+        MtTagLst[i].CurLen = 0U;
     }
     return;
 }
 
 void CMetaClndr::SetBegin(const uint64_t& iBeginToRefMil) {
-    for(int i=dNumCycle-1L; 0L<=i; i--) {
-        uint64_t DiffSum = MtCycLst[i].CycNo*MtCycLst[i].DiffL;
-        MtCycLst[i].DiffA = DiffSum%dCycDifSgt;
-        uint64_t LastMil = iBeginToRefMil + DiffSum/dCycDifSgt;
-        (dIndxDay    == i)?(LastMil += DoubleToUint(dOffstMont  )):(0L);
-        (dIndxSlrTrm == i)?(LastMil += DoubleToUint(dOffstSlrTrm)):(0L);
-        (dIndxMont   == i)?(LastMil += DoubleToUint(dOffstMont  )):(0L);
-        (dIndxSeason == i)?(LastMil += DoubleToUint(dOffstSeason)):(0L);
-        LastMil %= MtCycLst[i].ReLen;
-        MtCycLst[i].CycNo = scnstCycCfgLst[i].Start + LastMil/MtCycLst[i].CyLen;
-        MtCycLst[i].LenMl += MtCycLst[i].CycNo*MtCycLst[i].CyLen + LastMil%MtCycLst[i].CyLen;
+    for(int i=dNumTagle-1L; 0L<=i; i--) {
+        uint64_t BeginToRefMil = iBeginToRefMil;
+        (dIndxSeason == i)?(BeginToRefMil += DoubleToUint(dOffstSeason)):(0L);
+        (dIndxSlrTrm == i)?(BeginToRefMil += DoubleToUint(dOffstSlrTrm)):(0L);
+        (dIndxMont   == i)?(BeginToRefMil += DoubleToUint(dOffstMont  )):(0L);
+        (dIndxDay    == i)?(BeginToRefMil += DoubleToUint(dOffstDay   )):(0L);
+        uint64_t CycCnt = BeginToRefMil/MtTagLst[scTagCfgLst[i].RstIdx].Length;
+        uint64_t TagCnt = (CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].Length + \
+                          CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].DiffL/dTagDifSgt)/MtTagLst[i].Length;
+        uint64_t CurLen = BeginToRefMil - TagCnt*MtTagLst[i].Length;
+        MtTagLst[i].Num = scTagCfgLst[i].Start + CurLen/MtTagLst[i].Length;
+        MtTagLst[i].CurLen = CurLen%MtTagLst[i].Length;
+        MtTagLst[i].DiffA = (BeginToRefMil/MtTagLst[i].Length*MtTagLst[i].DiffA)%dTagDifSgt;
     }
     return;
 }
@@ -206,46 +206,44 @@ void CMetaClndr::UpTo(const uint64_t& iAfterRefMil) {
 }
 
 void CMetaClndr::Adjust(const uint64_t& iAfterRefMil) {
-    MtCycLst[dIndxMont].LenMl += static_cast<uint64_t>(dCycLnMonDiffYr*static_cast<double>(iAfterRefMil/dCycLenYear));
-    MtCycLst[dIndxYear].LenMl -= static_cast<uint64_t>(dCycLenYrDiffDy*static_cast<double>(iAfterRefMil/dCycLenDay));
+    MtTagLst[dIndxMont].CurLen += static_cast<uint64_t>(dTagLnMonDiffYr*static_cast<double>(iAfterRefMil/dTagLenYear));
+    MtTagLst[dIndxYear].CurLen -= static_cast<uint64_t>(dTagLenYrDiffDy*static_cast<double>(iAfterRefMil/dTagLenDay));
     return;
 }
 
 void CMetaClndr::Refrash(void) {
-    for(int i=0L; dNumCycle>i; i++) {
-        if(MtCycLst[i].ReLen <= MtCycLst[i].LenMl) {
-            MtCycLst[i].LenMl -= MtCycLst[i].ReLen;
-            MtCycLst[i].CycNo = scnstCycCfgLst[i].Start;
-        } else {
-            MtCycLst[i].LenMl++;
-            if(0U == MtCycLst[i].LenMl%MtCycLst[i].CyLen) {
-                MtCycLst[i].DiffA += MtCycLst[i].DiffL;
-                if(dCycDifSgt <= MtCycLst[i].DiffA) {
-                    MtCycLst[i].DiffA -= dCycDifSgt;
-                    MtCycLst[i].LenMl--;
-                } else {
-                    MtCycLst[i].CycNo++;
-                }
-                if(dIndxDay == i) {
-                    MtCycLst[dIndxYear].CyLen -= DoubleToUint(dCycLenYrDiffDy);
-                }
-                if(dIndxYear == i) {
-                    MtCycLst[dIndxMont].CyLen += DoubleToUint(dCycLnMonDiffYr);
-                }
+    for(int i=0L; dNumTagle>i; i++) {
+        MtTagLst[i].CurLen++;
+        MtTagLst[i].DiffA += MtTagLst[i].DiffL;
+        if(dTagDifSgt <= MtTagLst[i].DiffA) {
+            MtTagLst[i].CurLen--;
+            MtTagLst[i].DiffA -= MtTagLst[i].DiffL;
+        }
+        if(0U == MtTagLst[i].CurLen%MtTagLst[i].Length) {
+            MtTagLst[i].Num++;
+            if(MtTagLst[scTagCfgLst[i].RstIdx].Length <= (MtTagLst[i].Num - scTagCfgLst[i].Start)*scTagCfgLst[i].Length) {
+                MtTagLst[i].Num = scTagCfgLst[i].Start;
+                MtTagLst[i].CurLen = 0U;
+            }
+            if(dIndxDay == i) {
+                MtTagLst[dIndxYear].Length -= DoubleToUint(dTagLenYrDiffDy);
+            }
+            if(dIndxYear == i) {
+                MtTagLst[dIndxMont].Length += DoubleToUint(dTagLnMonDiffYr);
             }
         }
     }
     return;
 }
 
-uint64_t CMetaClndr::CycNo(const int iIdx) {
-    return MtCycLst[iIdx].CycNo;
+uint64_t CMetaClndr::Num(const int iIdx) {
+    return MtTagLst[iIdx].Num;
 }
 
 std::string CMetaClndr::StrClndr(void) {
     std::ostringstream Oss;
-    for(int i=dNumCycle-1L; 0L<=i; i--) {
-        Oss << CycNo(i) << scnstKeyTag[i];
+    for(int i=dNumTagle-1L; 0L<=i; i--) {
+        Oss << Num(i) << scnstKeyTag[i];
     }
     return Oss.str();
 }
@@ -270,31 +268,31 @@ void C_Core_MetaClndr::Refersh(void) {
 
 
 uint64_t C_Core_MetaClndr::Year(void) {
-    return sclsMetaClndr->CycNo(dIndxYear);
+    return sclsMetaClndr->Num(dIndxYear);
 }
 
 uint64_t C_Core_MetaClndr::Mont(void) {
-    return sclsMetaClndr->CycNo(dIndxMont);
+    return sclsMetaClndr->Num(dIndxMont);
 }
 
 uint64_t C_Core_MetaClndr::Day (void) {
-    return sclsMetaClndr->CycNo(dIndxDay );
+    return sclsMetaClndr->Num(dIndxDay );
 }
 
 uint64_t C_Core_MetaClndr::Hour(void) {
-    return sclsMetaClndr->CycNo(dIndxHour);
+    return sclsMetaClndr->Num(dIndxHour);
 }
 
 uint64_t C_Core_MetaClndr::Minu(void) {
-    return sclsMetaClndr->CycNo(dIndxMinu);
+    return sclsMetaClndr->Num(dIndxMinu);
 }
 
 uint64_t C_Core_MetaClndr::Seco(void) {
-    return sclsMetaClndr->CycNo(dIndxSeco);
+    return sclsMetaClndr->Num(dIndxSeco);
 }
 
 uint64_t C_Core_MetaClndr::Mili(void) {
-    return sclsMetaClndr->CycNo(dIndxMili);
+    return sclsMetaClndr->Num(dIndxMili);
 }
 
 std::string C_Core_MetaClndr::GetCalendar(void) {

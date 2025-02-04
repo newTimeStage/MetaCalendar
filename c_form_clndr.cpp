@@ -7,7 +7,7 @@
 #include <QDateTime>
 
 #define dStrFormNameClndr    "元始历"
-#define dMetaClndrStart      QDate(-59752L, 6L, 5L), QTime(0L, 0L, 0L)
+#define dMetaClndrStart      QDate(-59752L, 6L, 4L), QTime(0L, 0L, 0L)
 
 class C_FormClndr : public QObject
 {
