@@ -121,7 +121,9 @@ void C_Form_Clndr::on_pushButtonTrans_clicked()
     if(false == GeliDate.isValid() || false == GeliTime.isValid()) {
         ui->textEditStartClndr->setText("日期或时间格式错误");
     } else {
-        ui->textEditStartClndr->setText(clsFormClndr->TransFromGeli(QDateTime(GeliDate, GeliTime)));
+        QString QStrTrsDtTm = clsFormClndr->TransFromGeli(QDateTime(GeliDate, GeliTime)) + "\n" \
+                            + "华元：" + QString::number(GeliYear + 7737L) + "年";
+        ui->textEditStartClndr->setText(QStrTrsDtTm);
     }
     return;
 }
