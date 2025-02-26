@@ -188,12 +188,12 @@ void CMetaClndr::SetBegin(const uint64_t& iBeginToRefMil) {
         (dIndxMont   == i)?(BeginToRefMil += DoubleToUint(dOffstMont  )):(0L);
         (dIndxDay    == i)?(BeginToRefMil += DoubleToUint(dOffstDay   )):(0L);
         uint64_t CycCnt = BeginToRefMil/MtTagLst[scTagCfgLst[i].RstIdx].Length;
-        uint64_t TagCnt = (CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].Length + \
-                          CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].DiffL/dTagDifSgt)/MtTagLst[i].Length;
-        uint64_t CurLen = BeginToRefMil - TagCnt*MtTagLst[i].Length;
+        uint64_t RealLn = CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].Length + \
+                          CycCnt*MtTagLst[scTagCfgLst[i].RstIdx].DiffL/dTagDifSgt;
+        uint64_t CurLen = BeginToRefMil - RealLn;
         MtTagLst[i].Num = scTagCfgLst[i].Start + CurLen/MtTagLst[i].Length;
         MtTagLst[i].CurLen = CurLen%MtTagLst[i].Length;
-        MtTagLst[i].DiffA = (BeginToRefMil/MtTagLst[i].Length*MtTagLst[i].DiffA)%dTagDifSgt;
+        MtTagLst[i].DiffA = (RealLn/MtTagLst[i].Length*MtTagLst[i].DiffA)%dTagDifSgt;
     }
     return;
 }
