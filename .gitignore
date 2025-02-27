@@ -72,3 +72,4 @@ CMakeLists.txt.user*
 *.dll
 *.exe
 
+build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qtc_clangd/.cache/clangd/index/c_core_metaclndr.cpp.24D048666C8D8473.idx

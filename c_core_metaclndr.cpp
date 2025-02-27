@@ -20,7 +20,7 @@
 #define dTagLenDay       (24.0f*dTagLenHour)
 #define dOffstDay        (-12.0f*dTagLenDay)
 #define dTagLenMont      (29.530588853f*dTagLenDay)   /* 月球周年 */
-#define dOffstMont       (3.0f*dTagLenMont + 17.0f*dTagLenDay)
+#define dOffstMont       (3.0f*dTagLenMont + 18.0f*dTagLenDay)
 #define dTagLnMonDiffYr  (0.000000002162f*dTagLenDay)  /* from J2000 + */
 #define dTagLenMercury   (87.9691f*dTagLenDay)    /* 水星周年 */
 #define dTagLenVenus     (224.701f*dTagLenDay)    /* 金星周年 */
